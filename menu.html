@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Materi</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:linear-gradient(135deg,#e3f2fd,#bbdefb);font-family:Arial,sans-serif;padding:30px 20px;min-height:100vh}
+        .container{background:#fff;border-radius:16px;padding:30px 25px;max-width:500px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,.1);animation:muncul .6s ease-out}
+        @keyframes muncul{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        h1{color:#1565c0;font-size:24px;text-align:center;margin-bottom:25px}
+        .menu-btn{background:linear-gradient(135deg,#42a5f5,#1976d2);color:#fff;padding:14px 20px;font-size:16px;border:none;border-radius:10px;cursor:pointer;margin:8px;width:90%;transition:transform .2s}
+        .menu-btn:active{transform:scale(.97)}
+        .kembali{background:#f0f0f0;color:#333;margin-top:20px}
+      /* Warna berbeda tiap tombol materi */
+.btn-1 {
+    background: #e3f2fd;
+    border-left: 5px solid #2196F3;
+    color: #1565C0;
+}
+.btn-2 {
+    background: #fce4ec;
+    border-left: 5px solid #E91E63;
+    color: #AD1457;
+}
+.btn-3 {
+    background: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    color: #2E7D32;
+}
+.btn-4 {
+    background: #fff3e0;
+    border-left: 5px solid #FF9800;
+    color: #E65100;
+}
+.btn-5 {
+    background: #f3e5f5;
+    border-left: 5px solid #9C27B0;
+    color: #7B1FA2;
+}
+.btn-6 {
+    background: #ffebee;
+    border-left: 5px solid #f44336;
+    color: #c62828;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 PILIH MATERI</h1>
+
+<button class="menu-btn btn-1" onclick="window.location.href='Astronomis.html'">📍 Letak Astronomis</button>
+
+<button class="menu-btn btn-2" onclick="window.location.href='geografis.html'">🌍 Letak Geografis</button>
+
+<button class="menu-btn btn-3" onclick="window.location.href='geologis.html'">🏔️ Letak Geologis</button>
+
+<button class="menu-btn btn-4" onclick="window.location.href='dampak.html'">💡 Dampak bagi Kehidupan</button>
+
+<button class="menu-btn btn-5" onclick="window.location.href='keberagaman.html'">🤝 Keberagaman Masyarakat</button>
+
+<button class="menu-btn btn-6" onclick="window.location.href='kuis.html'">📝 Kuis Pemahaman</button>
+
+<button class="menu-btn kembali" onclick="window.location.href='index.html'">← Kembali ke Halaman Awal</button>
+
+    </div>
+</body>
+</html>

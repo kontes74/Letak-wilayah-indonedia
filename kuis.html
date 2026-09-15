@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pemahaman</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:linear-gradient(135deg,#e3f2fd,#bbdefb);font-family:Arial,sans-serif;padding:30px 20px;min-height:100vh}
+        .container{background:#fff;border-radius:16px;padding:30px 25px;max-width:550px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,.1);animation:muncul .6s ease-out}
+        @keyframes muncul{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        h1{color:#1565c0;font-size:22px;text-align:center;margin-bottom:25px}
+        .soal{font-size:16px;line-height:1.8;color:#333;margin-bottom:25px;padding-bottom:15px;border-bottom:1px dashed #ddd}
+        .pertanyaan{font-weight:bold;margin-bottom:12px;font-size:17px}
+        .pilihan{margin-left:20px;margin-bottom:8px;padding:8px;border-radius:6px;transition:.2s}
+        .pilihan:hover{background:#e3f2fd}
+        .btn{background:linear-gradient(135deg,#42a5f5,#1976d2);color:#fff;padding:14px 20px;font-size:16px;border:none;border-radius:10px;cursor:pointer;width:100%;margin-top:10px;font-weight:bold}
+        .btn:active{transform:scale(.97)}
+        .btn-kembali{background:#f0f0f0;color:#333;margin-top:25px;font-weight:normal}
+        .hasil{margin-top:25px;padding:20px;border-radius:12px;background:#e8f5e9;display:none;text-align:center}
+        .skor-besar{font-size:42px;font-weight:bold;color:#2e7d32;margin:10px 0}
+        .benar{color:green}
+        .emoji{font-size:50px;margin:10px 0}
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+          /div>
+          <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis IPS — Letak Wilayah Indonesia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #2c8fdb, #28b463);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #2c8fdb;
+            margin-bottom: 30px;
+        }
+        .soal {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            border-left: 5px solid #28b463;
+        }
+        .nomor {
+            font-weight: bold;
+            color: #2c8fdb;
+            margin-bottom: 10px;
+        }
+        .pertanyaan {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .pilihan {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .pilihan:hover {
+            background: #d4efdf;
+        }
+        .jawaban-benar {
+            background: #abebc6;
+            color: #155724;
+            font-weight: bold;
+        }
+        .jawaban-salah {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .kunci {
+            margin-top: 10px;
+            padding: 8px;
+            background: #fff3cd;
+            border-radius: 5px;
+            color: #856404;
+            font-size: 14px;
+        }
+        .btn-kunci {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #2c8fdb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn-kunci:hover {
+            background: #1a6fb8;
+        }
+      /* Warna berbeda tiap pilihan */
+.pilihan-a {
+    background: #e3f2fd;
+    border-left: 5px solid #2196F3;
+    color: #1565C0;
+}
+.pilihan-b {
+    background: #fce4ec;
+    border-left: 5px solid #E91E63;
+    color: #AD1457;
+}
+.pilihan-c {
+    background: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    color: #2E7D32;
+}
+.pilihan-d {
+    background: #fff3e0;
+    border-left: 5px solid #FF9800;
+    color: #E65100;
+}
+
+/* Warna saat jawaban dipilih */
+.jawaban-benar {
+    background: #c8f7dc !important;
+    border-color: #28a745 !important;
+    color: #155724 !important;
+    font-weight: bold;
+}
+.jawaban-salah {
+    background: #ffe0e0 !important;
+    border-color: #dc3545 !important;
+    color: #721c24 !important;
+    font-weight: bold;
+}
+    </style>
+
+        <!-- SOAL 1 -->
+        <div class="soal">
+            <div class="nomor">1</div>
+            <div class="pertanyaan">Letak astronomis Indonesia adalah...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. 6°LU – 11°LU dan 95°BT – 141°BT</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, true)">B. 6°LU – 11°LS dan 95°BT – 141°BT</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">C. 6°LS – 11°LS dan 95°BB – 141°BB</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. 6°LU – 11°LS dan 95°BB – 141°BT</div>
+            <div class="kunci" style="display:none;">Kunci: B → Indonesia berada di belahan bumi utara dan selatan, serta di garis bujur timur</div>
+        </div>
+
+        <!-- SOAL 2 -->
+        <div class="soal">
+            <div class="nomor">2</div>
+            <div class="pertanyaan">Berdasarkan letak geografis, Indonesia berada di antara...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. Benua Asia dan Benua Eropa</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, true)">B. Benua Asia dan Benua Australia</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">C. Benua Australia dan Benua Amerika</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Benua Asia dan Benua Afrika</div>
+            <div class="kunci" style="display:none;">Kunci: B → Letak geografis Indonesia di antara 2 benua: Asia (Utara) dan Australia (Selatan)</div>
+        </div>
+
+        <!-- SOAL 3 -->
+        <div class="soal">
+            <div class="nomor">3</div>
+            <div class="pertanyaan">Selain di antara dua benua, Indonesia juga terletak di antara dua samudra, yaitu...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. Samudra Pasifik dan Samudra Atlantik</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. Samudra Hindia dan Samudra Arktik</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">C. Samudra Pasifik dan Samudra Hindia</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Samudra Atlantik dan Samudra Hindia</div>
+            <div class="kunci" style="display:none;">Kunci: C → Di sebelah timur Samudra Pasifik, sebelah barat Samudra Hindia</div>
+        </div>
+
+        <!-- SOAL 4 -->
+        <div class="soal">
+            <div class="nomor">4</div>
+            <div class="pertanyaan">Karena dilewati garis khatulistiwa, Indonesia beriklim...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. Sedang</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. Dingin</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">C. Tropis</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Subtropis</div>
+            <div class="kunci" style="display:none;">Kunci: C → Garis khatulistiwa membuat Indonesia beriklim tropis dengan curah hujan tinggi</div>
+        </div>
+
+        <!-- SOAL 5 -->
+        <div class="soal">
+            <div class="nomor">5</div>
+            <div class="pertanyaan">Pengaruh letak astronomis Indonesia terhadap iklim adalah...</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">A. Memiliki 4 musim</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, true)">B. Memiliki iklim tropis dengan 2 musim</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">C. Suhu udara selalu dingin</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Curah hujan sangat rendah</div>
+            <div class="kunci" style="display:none;">Kunci: B → Akibat letak astronomis, Indonesia beriklim tropis dan memiliki 2 musim (kemarau & hujan)</div>
+        </div>
+
+        <!-- SOAL 6 -->
+        <div class="soal">
+            <div class="nomor">6</div>
+            <div class="pertanyaan">Pengaruh letak geografis Indonesia adalah...</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">A. Menjadi negara tertutup</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">B. Menjadi jalur perdagangan dunia</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">C. Iklim menjadi sangat dingin</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">D. Terpengaruh angin muson saja</div>
+            <div class="kunci" style="display:none;">Kunci: B → Letak di antara 2 benua & 2 samudra menjadikan Indonesia jalur lalu lintas perdagangan dunia</div>
+        </div>
+
+        <!-- SOAL 7 -->
+        <div class="soal">
+            <div class="nomor">7</div>
+            <div class="pertanyaan">Angin yang bertiup dari benua Asia ke Australia pada bulan Oktober–April disebut...</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">A. Angin Muson Barat</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, true)">B. Angin Muson Timur</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">C. Angin Pasat</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">D. Angin Lokal</div>
+            <div class="kunci" style="display:none;">Kunci: B → Angin Muson Timur bertiup Okt–Apr, membawa sedikit uap air → musim kemarau</div>
+        </div>
+
+        <!-- SOAL 8 -->
+        <div class="soal">
+            <div class="nomor">8</div>
+            <div class="pertanyaan">Berikut ini yang BUKAN merupakan batas wilayah Indonesia adalah...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. Sebelah Utara: Semenanjung Malaya, Filipina</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. Sebelah Selatan: Benua Australia</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">C. Sebelah Timur: Benua Amerika</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Sebelah Barat: Samudra Hindia</div>
+            <div class="kunci" style="display:none;">Kunci: C → Sebelah timur Indonesia berbatasan dengan Samudra Pasifik, bukan Benua Amerika</div>
+        </div>
+
+        <!-- SOAL 9 -->
+        <div class="soal">
+            <div class="nomor">9</div>
+            <div class="pertanyaan">Negara tetangga yang berbatasan darat dengan Indonesia di sebelah utara adalah...</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">A. Malaysia</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">B. Singapura</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">C. Thailand</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">D. Vietnam</div>
+            <div class="kunci" style="display:none;">Kunci: A → Malaysia berbatasan darat dengan Indonesia di Pulau Kalimantan</div>
+        </div>
+
+        <!-- SOAL 10 -->
+        <div class="soal">
+            <div class="nomor">10</div>
+            <div class="pertanyaan">Ruang lingkup geografi mencakup studi tentang...</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">A. Hanya bentang alam bumi</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. Hanya kehidupan manusia</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, true)">C. Fenomena fisik dan aktivitas manusia di muka bumi</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">D. Luar angkasa dan planet lain</div>
+            <div class="kunci" style="display:none;">Kunci: C → Geografi mempelajari fenomena fisik alam dan aktivitas manusia serta interaksinya</div>
+        </div>
+
+        <!-- SOAL 11 -->
+        <div class="soal">
+            <div class="nomor">11</div>
+            <div class="pertanyaan">Indonesia memiliki wilayah perairan lebih luas daripada daratan, yaitu sebesar...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. 1/3 dari total wilayah</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. 2/3 dari total wilayah</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, true)">C. 3/4 dari total wilayah</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. 1/2 dari total wilayah</div>
+            <div class="kunci" style="display:none;">Kunci: C → Sekitar 3/4 wilayah Indonesia adalah perairan, 1/4 daratan</div>
+        </div>
+
+        <!-- SOAL 12 -->
+        <div class="soal">
+            <div class="nomor">12</div>
+            <div class="pertanyaan">Faktor utama yang menyebabkan Indonesia memiliki keanekaragaman hayati yang tinggi adalah...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">A. Letak strategis</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, true)">B. Beriklim tropis</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">C. Banyak pulau</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">D. Dikelilingi samudra</div>
+            <div class="kunci" style="display:none;">Kunci: B → Iklim tropis dengan suhu hangat dan curah hujan tinggi mendukung keanekaragaman hayati</div>
+        </div>
+
+        <!-- SOAL 13 -->
+        <div class="soal">
+            <div class="nomor">13</div>
+            <div class="pertanyaan">Garis yang memisahkan musim kemarau dan penghujan di Indonesia dipengaruhi oleh...</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, true)">A. Angin Muson</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">B. Arus laut</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">C. Rotasi bumi</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">D. Revolusi bumi</div>
+            <div class="kunci" style="display:none;">Kunci: A → Pergantian angin muson menentukan musim hujan dan kemarau di Indonesia</div>
+        </div>
+
+        <!-- SOAL 14 -->
+        <div class="soal">
+            <div class="nomor">14</div>
+            <div class="pertanyaan">Letak astronomis Indonesia berfungsi sebagai penentu...</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">A. Batas wilayah laut</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, true)">B. Zona waktu dan iklim</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">C. Kekayaan alam</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, false)">D. Batas negara tetangga</div>
+            <div class="kunci" style="display:none;">Kunci: B → Garis lintang menentukan iklim, garis bujur menentukan zona waktu (WIB, WITA, WIT)</div>
+        </div>
+
+        <!-- SOAL 15 -->
+        <div class="soal">
+            <div class="nomor">15</div>
+            <div class="pertanyaan">Berikut yang merupakan manfaat letak strategis Indonesia adalah...</div>
+            <div class="pilihan-c" onclick="cekJawaban(this, false)">A. Menjadi negara yang tertutup</div>
+            <div class="pilihan-d" onclick="cekJawaban(this, false)">B. Terisolasi dari dunia luar</div>
+            <div class="pilihan-a" onclick="cekJawaban(this, true)">C. Memiliki banyak pelabuhan dan jalur perdagangan</div>
+            <div class="pilihan-b" onclick="cekJawaban(this, false)">D. Sulit berhubungan dengan negara lain</div>
+            <div class="kunci" style="display:none;">Kunci: C → Letak strategis membuat Indonesia memiliki banyak pelabuhan dan menjadi jalur perdagangan internasional</div>
+        </div>
+
+        <button class="btn-kunci" onclick="tampilkanKunci()">📋 Tampilkan Semua Kunci Jawaban</button>
+    </>
+
+    <script>
+        function cekJawaban(element, benar) {
+            // Hapus kelas sebelumnya
+            let parent = element.parentElement;
+            let pilihan = parent.querySelectorAll('.pilihan');
+            pilihan.forEach(p => {
+                p.classList.remove('jawaban-benar', 'jawaban-salah');
+            });
+
+            if (benar) {
+                element.classList.add('jawaban-benar');
+            } else {
+                element.classList.add('jawaban-salah');
+            }
+        }
+
+        function tampilkanKunci() {
+            let kunci = document.querySelectorAll('.kunci');
+            kunci.forEach(k => {
+                k.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
+
+        </div>
+        <button class="btn" onclick="cekJawaban()">✅ CEK HASIL KUIS</button>
+        <div class="hasil" id="hasil">
+            <div class="emoji" id="emojiHasil">🎉</div>
+            <h3>SKOR ANDA</h3>
+            <div class="skor-besar" id="skor">0/5</div>
+            <p id="pesanHasil">Selamat mencoba!</p>
+            <details style="text-align:left;background:#fff;padding:12px;border-radius:8px;margin-top:10px">
+                <summary style="cursor:pointer;font-weight:bold;color:#1565c0">📖 Kunci Jawaban</summary>
+                <div style="margin-top:10px;font-size:14px;line-height:1.8">
+                    <p><span class="benar">✓</span> 1. 6° LU – 11° LS & 95° BT – 141° BT</p>
+                    <p><span class="benar">✓</span> 2. Asia & Australia</p>
+                    <p><span class="benar">✓</span> 3. Cincin Api Pasifik</p>
+                    <p><span class="benar">✓</span> 4. Beriklimat tropis & punya 2 musim</p>
+                    <p><span class="benar">✓</span> 5. Indo-Australia, Eurasia, & Pasifik</p>
+                </div>
+            </details>
+        </div>
+        <button class="btn btn-kembali" onclick="location.href='menu.html'">← Kembali ke Menu</button>
+    </div>
+    <script>
+        function cekJawaban(){
+            let skor=0;
+            const jawaban={q1:'a',q2:'b',q3:'b',q4:'a',q5:'b'};
+            for(let i=1;i<=5;i++){
+                const p=document.querySelector('input[name="q'+i+'"]:checked');
+                if(p&&p.value===jawaban['q'+i]) skor++;
+            }
+            document.getElementById('skor').textContent=skor+'/5';
+            let emoji='🎉',pesan='Luar biasa!';
+            if(skor<=2){emoji='💪';pesan='Terus berlatih!';}
+            else if(skor<=4){emoji='👍';pesan='Bagus! Tinggal sedikit lagi!';}
+            document.getElementById('emojiHasil').textContent=emoji;
+            document.getElementById('pesanHasil').textContent=pesan;
+            document.getElementById('hasil').style.display='block';
+            document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+        }
+    </script>
+</body>
+</html>
